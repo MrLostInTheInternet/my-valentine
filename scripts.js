@@ -13,8 +13,8 @@ document.getElementById('movingButton').addEventListener('mouseover', function()
         const maxX = container.clientWidth - this.offsetWidth;
         const maxY = container.clientHeight - this.offsetHeight;
 
-        const newX = Math.random() * maxX ;
-        const newY = Math.random() * maxY ;
+        const newX = Math.random() * maxX;
+        const newY = Math.random() * maxY;
 
         this.style.transform = `translate(${newX}px, ${newY}px)`;
         hoverCount++;
@@ -25,7 +25,6 @@ document.getElementById('movingButton').addEventListener('mouseover', function()
         }
     }
 });
-
 
 document.getElementById('movingButton').addEventListener('click', function() {
     const popupContainer = document.getElementById('popupContainer');
