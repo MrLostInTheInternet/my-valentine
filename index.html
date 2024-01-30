@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #movingButton {
+            transition: transform 0.3s ease;
+            position: absolute;
+        }
+        #popupContainer.active {
+            display: flex;
+            display: -webkit-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #popupContainerBig.active {
+            display: flex;
+            display: -webkit-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #popupButton, #movingButton {
+            font-size: 1rem;
+            padding: 0.7rem 1.2rem;
+        }
+    </style>
+</head>
+<body background="public/assets/background.png">
+    <div class="absolute inset-0 flex items-center justify-center">
+        <div id="popupContainer" class="hidden fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center">
+            <div class="p-8 rounded shadow-lg">
+                <img src="public/assets/huh-cat.gif" alt="Confused Cat" id="noAnswer">
+            </div>
+        </div>
+        <div id="popupContainerBig" class="hidden fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center">
+            <div class="p-12 rounded-lg shadow-lg relative text-center">
+                <img src="public/assets/cat-cats.gif" alt="Larger GIF" id="largerGif">
+                <div class="text-white font-semibold text-3xl bg-pink-500 bg-opacity-50 rounded-lg">
+                    <span>
+                        SIIIIIIIII DUDUU
+                        <br>
+                        TI AMO
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="flex items-center align-items justify-center">
+            <div>
+                <img class="rounded-full" src="public/assets/cat_elegant.png" alt="Elegant Cat">
+            </div>
+            <div class="flex items-center justify-center flex-col">
+                <div class="bg-white bg-opacity-50 p-12 rounded-lg shadow-lg relative text-center">
+                    <span class="text-red-600 font-semibold text-3xl">
+                        Would you be my Valentine?
+                    </span>
+                </div>
+                <div class="flex justify-center items-center relative w-96 h-96 rounded-lg">
+                    <div class="space-x-20 mx-10">
+                        <button id="movingButton" class="px-4 py-2 bg-red-400 text-white rounded hover:bg-orange-600">
+                            NO
+                        </button>
+                        <button id="popupButton" class="px-4 py-2 bg-pink-200 text-white rounded hover:bg-purple-400">
+                            YES BUBU
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
