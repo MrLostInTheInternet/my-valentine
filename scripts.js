@@ -13,8 +13,8 @@ document.getElementById('movingButton').addEventListener('mouseover', function()
         const maxX = container.clientWidth - this.offsetWidth;
         const maxY = container.clientHeight - this.offsetHeight;
 
-        const newX = Math.random() * maxX * 10;
-        const newY = Math.random() * maxY * 10;
+        const newX = Math.random() * maxX ;
+        const newY = Math.random() * maxY ;
 
         this.style.transform = `translate(${newX}px, ${newY}px)`;
         hoverCount++;
